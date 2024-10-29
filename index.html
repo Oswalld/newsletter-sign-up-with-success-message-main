@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Newsletter sign-up form with success message</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/output.css">
+
+</head>
+<body class="md:bg-greyPlus md:flex md:items-center md:justify-center md:min-h-[100vh]">
+
+  <div id="formulaire-mail" class="flex flex-col md:flex-row-reverse md:items-center md:bg-white md:rounded-3xl md:p-5 md:shadow-2xl md:shadow-greyPlusPlus/100">
+    <picture>
+      <!-- Image pour écrans larges (desktop) -->
+      <source media="(min-width: 768px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+      <!-- Image pour écrans plus petits (mobile) -->
+      <source media="(max-width: 767px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
+      <!-- Fallback si le navigateur ne supporte pas <picture> -->
+      <img class="w-full" src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+      </picture>
+    
+  
+    <div class="px-7 py-12 space-y-7 md:max-w-[550px] md:pr-14 md:pl-9">
+      <h1>Stay updated!</h1>
+    
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    
+      <ul class="*:flex *:items-start *:gap-5 *:font-medium space-y-2">
+        <li><img class="pt-1" src="./assets/images/icon-list.svg" alt=""><p>Product discovery and building what matters</p></li>
+        <li><img class="pt-1" src="./assets/images/icon-list.svg" alt=""><p>Measuring to ensure updates are a success</p></li>
+        <li><img class="pt-1" src="./assets/images/icon-list.svg" alt=""><p>And much more!</p></li>
+      </ul>
+    
+      <form>
+        <div class="relative mb-7">
+          <label class="font-black mb-4 text-greyPlusPlus text-sm">Email address</label>
+          <input class="mt-3 w-full border-[1px] border-grey border-opacity-50 rounded-[9px] px-7 py-5 text-greyPlusPlus font-medium" type="text" name="mail" id="mail" placeholder="email@company.com">
+          <span class="error absolute hidden top-0 right-0 text-rouge text-sm font-bold">Valid email required</span>
+        </div>
+        <button id="submit" type="submit">Subscribe to monthly newsletter</button>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="hidden send-sucess z-10 bg-white h-full w-full top-0 absolute px-7 flex flex-col justify-between pt-[20vh] pb-12
+  md:w-[540px] md:h-[540px] md:top-1/2 md:-translate-y-1/2 md:rounded-3xl md:p-14 md:shadow-2xl md:shadow-greyPlusPlus/100 ">
+    <div class="space-y-8">
+      <img src="./assets/images/icon-success.svg" alt="">
+    
+      <h1>Thanks for subscribing!</h1>
+    
+      <p>
+        A confirmation email has been sent to <span class="font-bold">ash@loremcompany.com</span>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+    </div>
+  
+    <button>Dismiss message</button>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
